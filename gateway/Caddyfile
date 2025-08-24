@@ -1,0 +1,20 @@
+{
+  # Local dev: simple logs for clarity
+  admin off
+}
+
+:80 {
+  @api path /api* /openapi.json /docs /redoc
+  handle @api {
+    reverse_proxy api:8000
+  }
+
+  handle / {
+    header Content-Type text/plain
+    respond "Pipeline as Art is running. See /api/docs for the interactive API."
+  }
+
+  handle {
+    respond "Not found" 404
+  }
+}

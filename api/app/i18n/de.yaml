@@ -1,0 +1,5 @@
+root:
+  greeting: "Willkommen — die Pipeline lebt."
+about:
+  title: "Pipeline als Kunst"
+  mission: "Systeme verständlich, reproduzierbar und schön machen."
